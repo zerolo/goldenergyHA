@@ -1,0 +1,14 @@
+{
+    "version": "0.0.1",
+    "domain": "goldenergy",
+    "name": "Goldenergy",
+    "documentation": "https://github.com/zerolo/goldenergyHA",
+    "issue_tracker": "https://github.com/zerolo/goldenergyHA/issues",
+    "iot_class": "cloud_polling",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": [
+        "@zerolo"
+    ],
+    "config_flow": true
+}

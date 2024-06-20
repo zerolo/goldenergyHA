@@ -1,0 +1,25 @@
+{
+    "title": "Goldenergy",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Please add your credentials of goldenergy",
+                "description": "https://clientes.goldenergy.pt/",
+                "data": {
+                    "code": "Goldenergy NIF",
+                    "password": "Goldenergy password"
+                },
+                "data_description": {
+                    "username": "",
+                    "password": ""
+                }
+            }
+        },
+        "error": {
+            "invalid_login": "Invalid Login"
+        },
+        "abort": {
+            "already_configured": "Integration is already configured"
+        }
+    }
+}
