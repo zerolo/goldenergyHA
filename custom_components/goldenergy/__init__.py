@@ -1,6 +1,6 @@
 import logging
 
-from .goldenergyapi.goldenergy import Goldenergy
+from goldenergy import Goldenergy
 
 from .const import CONF_PASSWORD, CONF_CODE, DOMAIN
 from homeassistant.config_entries import ConfigEntry

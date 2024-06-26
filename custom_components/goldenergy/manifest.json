@@ -5,7 +5,7 @@
     "documentation": "https://github.com/zerolo/goldenergyHA",
     "issue_tracker": "https://github.com/zerolo/goldenergyHA/issues",
     "iot_class": "cloud_polling",
-    "requirements": [],
+    "requirements": ["goldenergy==0.0.2"],
     "dependencies": [],
     "codeowners": [
         "@zerolo"

@@ -6,7 +6,7 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .const import CONF_PASSWORD, CONF_CODE, DOMAIN
 
-from .goldenergyapi import Goldenergy
+from goldenergy import Goldenergy
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)

@@ -18,7 +18,7 @@ from .const import (
     CONF_CODE,
     CONF_PASSWORD
 )
-from .goldenergyapi import Goldenergy
+from goldenergy import Goldenergy
 
 from homeassistant.components.sensor import (SensorDeviceClass, SensorEntity, SensorStateClass)
 from homeassistant.config_entries import ConfigEntry
@@ -173,16 +173,18 @@ class GoldenergySensor(SensorEntity):
                     self._state = round(self._invoice.amount, 2)
             elif self._sensorType == ELECTRICITY_CONSUMPTION_ENTITY:
                 electricity_consumption = await self._api.get_last_consumption()
-                self._electricity_consumption = electricity_consumption["ELECTRICITY"]
-                _LOGGER.debug("electricity consumption %s", self._electricity_consumption)
-                if self._electricity_consumption:
-                    self._state = round(self._electricity_consumption.realKWh, 2)
+                if "ELECTRICITY" in electricity_consumption:
+                    self._electricity_consumption = electricity_consumption["ELECTRICITY"]
+                    _LOGGER.debug("electricity consumption %s", self._electricity_consumption)
+                    if self._electricity_consumption:
+                        self._state = round(self._electricity_consumption.realKWh, 2)
             elif self._sensorType == GAS_CONSUMPTION_ENTITY:
                 gas_consumption = await self._api.get_last_consumption()
-                self._gas_consumption = gas_consumption["GAS"]
-                _LOGGER.debug("gas consumption %s", self._gas_consumption)
-                if self._gas_consumption:
-                    self._state = round(self._gas_consumption.realM3, 2)
+                if "GAS" in gas_consumption:
+                    self._gas_consumption = gas_consumption["GAS"]
+                    _LOGGER.debug("gas consumption %s", self._gas_consumption)
+                    if self._gas_consumption:
+                        self._state = round(self._gas_consumption.realM3, 2)
             else:
                 self._state = 99
         except aiohttp.ClientError as err:
