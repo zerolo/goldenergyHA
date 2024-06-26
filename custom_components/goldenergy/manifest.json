@@ -1,14 +1,12 @@
 {
-    "version": "0.0.1",
     "domain": "goldenergy",
     "name": "Goldenergy",
-    "documentation": "https://github.com/zerolo/goldenergyHA",
-    "issue_tracker": "https://github.com/zerolo/goldenergyHA/issues",
-    "iot_class": "cloud_polling",
-    "requirements": ["goldenergy==0.0.2"],
+    "codeowners": ["@zerolo"],
+    "config_flow": true,
     "dependencies": [],
-    "codeowners": [
-        "@zerolo"
-    ],
-    "config_flow": true
+    "documentation": "https://github.com/zerolo/goldenergyHA",
+    "iot_class": "cloud_polling",
+    "issue_tracker": "https://github.com/zerolo/goldenergyHA/issues",
+    "requirements": ["goldenergy==0.0.2"],
+    "version": "0.0.1"
 }
